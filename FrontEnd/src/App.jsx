@@ -1,11 +1,19 @@
-import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navabar.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalContext from "./context/GlobalContext.js"
+import Layout from "./pages/Layout.jsx";
+import Home from "./pages/Home.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar/>
-      </BrowserRouter>
+      <GlobalContext.Provider value={{}}>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout/>}>
+              <Route path="/" element={<Home />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </GlobalContext.Provider>
     </>
   );
 }

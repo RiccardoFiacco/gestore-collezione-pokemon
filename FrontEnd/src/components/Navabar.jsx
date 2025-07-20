@@ -11,7 +11,7 @@ function Navbar() {
         />
         <p>My pokemon collection</p>
       </NavLink>
-      <div className="flex felx-row items-center w-[30%] justify-between">
+      <div className="flex flex-row items-center w-[30%] justify-between">
         <NavLink to="/" className="hover:text-blue-500">
           WishList
         </NavLink>

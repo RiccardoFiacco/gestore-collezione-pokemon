@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import GlobalContext from "../context/GlobalContext";
+import { SearchBar } from "../components/searchBar";
 export default function Home() {
+  const { search } = useContext(GlobalContext);
   return (
     <div>
-      inserimento o di una barra di research e di un filtro per i pokemon
+      <h1>{search}</h1>
+      <SearchBar />
     </div>
   );
 }
